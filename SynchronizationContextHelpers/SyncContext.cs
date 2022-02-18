@@ -11,7 +11,9 @@ public class SyncContext : Disposable
 {
     #region Properties
 
-    /// <inheritdoc/>
+    /// <summary>
+    /// Gets the <see cref="SyncOperation"/> used by this object.
+    /// </summary>
     public SyncOperation SyncOperation { get; private set; }
 
     #endregion
