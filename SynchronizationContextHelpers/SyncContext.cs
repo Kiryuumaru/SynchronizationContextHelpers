@@ -25,7 +25,7 @@ public class SyncContext : Disposable
     /// </summary>
     /// <remarks>
     /// <para>To use safely in UI operations, create the instance in UI thread.</para>
-    /// <para>See <see cref="Utilities.SyncOperation"/></para>
+    /// <para>See <see cref="SyncOperation"/></para>
     /// </remarks>
     public SyncContext()
     {

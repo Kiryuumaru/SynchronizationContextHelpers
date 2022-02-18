@@ -13,8 +13,8 @@ public class SyncOperation
 {
     #region Properties
 
-    private Action<(Action callback, object[] parameters)> contextPost;
-    private Action<(Action callback, object[] parameters)> contextSend;
+    private Action<(Action callback, object?[] parameters)> contextPost;
+    private Action<(Action callback, object?[] parameters)> contextSend;
 
     #endregion
 
@@ -55,7 +55,7 @@ public class SyncOperation
     /// <param name="contextSend">
     /// Operation implementation for send.
     /// </param>
-    public void SetContext(Action<(Action callback, object[] parameters)> contextPost, Action<(Action callback, object[] parameters)> contextSend)
+    public void SetContext(Action<(Action callback, object?[] parameters)> contextPost, Action<(Action callback, object?[] parameters)> contextSend)
     {
         this.contextPost = contextPost;
         this.contextSend = contextSend;
@@ -91,7 +91,7 @@ public class SyncOperation
     /// Sets the current synchronization context to use the <see cref="SyncContext"/> implementations as base context operation.
     /// </summary>
     /// <param name="syncObject">
-    /// The <see cref="ISyncObject"/> implementations to be use as base context operation.
+    /// The <see cref="SyncContext"/> implementations to be use as base context operation.
     /// </param>
     public void SetContext(SyncContext syncObject)
     {
@@ -109,7 +109,7 @@ public class SyncOperation
     /// <param name="parameters">
     /// The parameters to be pass at the current synchronization context.
     /// </param>
-    public void ContextPost(Action action, params object[] parameters)
+    public void ContextPost(Action action, params object?[] parameters)
     {
         contextPost((action, parameters));
     }
