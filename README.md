@@ -85,7 +85,7 @@ using ObservableHelpers;
 
 namespace YourNamespace
 {
-    public class Dinosaur : INotifyPropertyChanged
+    public class Dinosaur : SyncContext, INotifyPropertyChanged
     {
         private string name;
         public string Name
