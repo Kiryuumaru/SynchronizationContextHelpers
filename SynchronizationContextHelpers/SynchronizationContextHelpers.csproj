@@ -15,8 +15,8 @@
     <PackageTags>UI, MainThread, Sync, Synchronization, Backend, MultiThread, UI-Safe</PackageTags>
     <PackageProjectUrl>https://github.com/Kiryuumaru/SynchronizationContextHelpers</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Kiryuumaru/SynchronizationContextHelpers</RepositoryUrl>
-    <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageReleaseNotes>* Initial release</PackageReleaseNotes>
     <Version>1.0.0</Version>
   </PropertyGroup>
