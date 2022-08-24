@@ -1,6 +1,4 @@
-﻿using DisposableHelpers;
-using DisposableHelpers.Attributes;
-using System;
+﻿using System;
 using System.Threading.Tasks;
 
 namespace SynchronizationContextHelpers;
@@ -8,8 +6,7 @@ namespace SynchronizationContextHelpers;
 /// <summary>
 /// Provides operations for <see cref="SyncOperation"/> with proper disposable implementations.
 /// </summary>
-[Disposable]
-public partial class SyncContext
+public class SyncContext
 {
     #region Properties
 
@@ -49,18 +46,7 @@ public partial class SyncContext
     /// </param>
     protected void ContextPost(Action action, params object[] parameters)
     {
-        if (IsDisposed)
-        {
-            return;
-        }
-        SyncOperation.ContextPost(() =>
-        {
-            if (IsDisposed)
-            {
-                return;
-            }
-            action();
-        }, parameters);
+        SyncOperation.ContextPost(action, parameters);
     }
 
     /// <summary>
@@ -74,18 +60,7 @@ public partial class SyncContext
     /// </param>
     protected void ContextSend(Action action, params object[] parameters)
     {
-        if (IsDisposed)
-        {
-            return;
-        }
-        SyncOperation.ContextSend(() =>
-        {
-            if (IsDisposed)
-            {
-                return;
-            }
-            action();
-        }, parameters);
+        SyncOperation.ContextSend(action, parameters);
     }
 
     /// <summary>
@@ -102,18 +77,7 @@ public partial class SyncContext
     /// </returns>
     protected async Task ContextSendAsync(Action action, params object[] parameters)
     {
-        if (IsDisposed)
-        {
-            return;
-        }
-        await SyncOperation.ContextSendAsync(() =>
-        {
-            if (IsDisposed)
-            {
-                return;
-            }
-            action();
-        }, parameters);
+        await SyncOperation.ContextSendAsync(action, parameters);
     }
 
     /// <summary>
@@ -130,18 +94,7 @@ public partial class SyncContext
     /// </returns>
     protected async Task ContextSendAsync(Func<Task> func, params object[] parameters)
     {
-        if (IsDisposed)
-        {
-            return;
-        }
-        await SyncOperation.ContextSendAsync(async () =>
-        {
-            if (IsDisposed)
-            {
-                return;
-            }
-            await func();
-        }, parameters);
+        await SyncOperation.ContextSendAsync(func, parameters);
     }
 
     #endregion

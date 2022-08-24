@@ -17,8 +17,8 @@
     <RepositoryUrl>https://github.com/Kiryuumaru/SynchronizationContextHelpers</RepositoryUrl>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <PackageReleaseNotes>* Updated dependencies.</PackageReleaseNotes>
-    <Version>1.0.3</Version>
+    <PackageReleaseNotes>* Cleanup dependencies.</PackageReleaseNotes>
+    <Version>1.0.4</Version>
   </PropertyGroup>
 
   <ItemGroup>
