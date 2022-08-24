@@ -17,8 +17,8 @@
     <RepositoryUrl>https://github.com/Kiryuumaru/SynchronizationContextHelpers</RepositoryUrl>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <PackageReleaseNotes>* Added upper frameworks to simplify dependencies.</PackageReleaseNotes>
-    <Version>1.0.2</Version>
+    <PackageReleaseNotes>* Updated dependencies.</PackageReleaseNotes>
+    <Version>1.0.3</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -27,7 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="DisposableHelpers" Version="1.0.2" />
+    <PackageReference Include="DisposableHelpers" Version="1.1.6" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,5 @@
 ﻿using DisposableHelpers;
+using DisposableHelpers.Attributes;
 using System;
 using System.Threading.Tasks;
 
@@ -7,7 +8,8 @@ namespace SynchronizationContextHelpers;
 /// <summary>
 /// Provides operations for <see cref="SyncOperation"/> with proper disposable implementations.
 /// </summary>
-public class SyncContext : Disposable
+[Disposable]
+public partial class SyncContext
 {
     #region Properties
 
