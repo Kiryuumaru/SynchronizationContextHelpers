@@ -24,7 +24,6 @@
 
   <PropertyGroup>
     <PackageReleaseNotes>* Cleanup dependencies.</PackageReleaseNotes>
-    <Version>1.0.5</Version>
   </PropertyGroup>
 
   <ItemGroup>
